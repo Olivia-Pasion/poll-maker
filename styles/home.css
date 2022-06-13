@@ -1,1 +1,126 @@
 /* CSS for home page (index.html) */
+
+main {
+    padding: 0 30px 60px 30px;
+    background-color: bisque;
+
+    display: grid;
+    grid-template-rows: 350px 1fr;
+    grid-template-areas: 
+        'current-poll'
+        'past-polls'
+    ;
+}
+
+@media (min-width: 600px) {
+    main {
+        grid-template-columns: 275px 1fr;
+        grid-template-areas:
+            'current-poll  past-polls'
+        ;
+        grid-gap: 0 40px;
+    }
+}
+
+#current-poll {
+    grid-area: current-poll;
+}
+
+#past-polls {
+    grid-area: past-polls;
+}
+
+.tally-counter {
+    background: white;
+    border: 1px solid black;
+    padding: 10px 5px;
+
+    display: grid;
+    grid-template-areas: 
+        'option-a   option-b'
+        'upvote-a   upvote-b'
+    ;
+    gap: 10px;
+    justify-items: center;
+        
+}
+
+.tally-counter.controls {
+    grid-template-areas: 
+        'option-a   option-b'
+        'upvote-a   upvote-b'
+        'downvote-a   downvote-b'
+        'close-poll   close-poll'
+    ;
+}
+
+.option.a {
+    grid-area: option-a;
+}
+
+.option.b {
+    grid-area: option-b;
+}
+
+.upvote.a {
+    grid-area: upvote-a;
+}
+
+.upvote.b {
+    grid-area: upvote-b;
+}
+
+.downvote.a {
+    grid-area: downvote-a;
+}
+
+.downvote.b {
+    grid-area: downvote-b;
+}
+
+.close-poll {
+    grid-area: close-poll;
+}
+
+.option {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.upvote {
+    font-size: 2em;
+}
+
+button.action {
+    width: 100%;
+    background: orange;
+    color: white;
+    border: 0;
+    padding: 5px 25px;
+}
+
+form {
+    padding: 15px;
+    background: rgb(151, 180, 234);
+    border: 0;
+    border-radius: 3px;
+
+    display: grid;
+    gap: 5px;
+    text-align: center;
+}
+
+label {
+    display: contents;
+}
+
+.polls-container {
+    font-size: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1 fr));
+}
+
+.polls-container .tally-counter {
+    max-width: 285px;
+}
