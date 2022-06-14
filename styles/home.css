@@ -30,28 +30,55 @@ main {
     grid-area: past-polls;
 }
 
-.tally-counter {
+
+.result-box {
+
     background: white;
     border: 1px solid black;
     padding: 10px 5px;
 
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
+        'prompt   prompt'
         'option-a   option-b'
-        'upvote-a   upvote-b'
+        'tally-a   tally-b'
     ;
+    gap: 10px;
+    justify-items: center;
+}
+
+
+
+.tally-counter.controls {
+    background: white;
+    border: 1px solid black;
+    padding: 10px 5px;
+
+    display: grid;
+   
+
+    grid-template-areas: 
+    'option-a   option-b'
+    'upvote-a   upvote-b'
+    'downvote-a   downvote-b'
+    'close-poll   close-poll'
+    ;
+
     gap: 10px;
     justify-items: center;
         
 }
 
-.tally-counter.controls {
-    grid-template-areas: 
-        'option-a   option-b'
-        'upvote-a   upvote-b'
-        'downvote-a   downvote-b'
-        'close-poll   close-poll'
-    ;
+
+
+
+.tally {
+    
+    font-size: 2em;
+}
+.pollprompt {
+    grid-area: prompt;
+    font-weight: bolder;
 }
 
 .option.a {
@@ -121,6 +148,9 @@ label {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1 fr));
 }
 
+
+
 .polls-container .tally-counter {
     max-width: 285px;
 }
+

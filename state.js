@@ -4,9 +4,19 @@ const state = {};
 // initialize state, also used in test
 export function initialize() {
     // What is the initial shape of state?
-    // For example:
-    // state.game = null;
-    // state.pastGames = [];
+    state.poll =
+    
+    {
+       
+        pollPrompt: 'prompt',
+        optionA: { name:'option a', tally: 0 },
+        optionB: { name:'option b', tally: 0 },
+    
+    };
+
+    state.pastPolls = [];
+    
+
 }
 // call initialize
 initialize();
@@ -14,3 +24,4 @@ initialize();
 export default state;
 
 // export dispatch functions that modify state
+
