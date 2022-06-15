@@ -15,7 +15,7 @@ export function initialize() {
      
     // };
 
-    // state.pastPolls = [];
+    state.pastPolls = [];
     
 
 }
@@ -50,4 +50,9 @@ export function downVote(option) {
     if (option === 'B') {
         state.poll.optionB.tally--;
     }
+}
+
+export function closePoll() {
+    state.pastPolls.push(state.poll);
+    state.poll = null;
 }

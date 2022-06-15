@@ -1,3 +1,4 @@
+
 export default function createStartPoll(root, handlers) {
     
     const handleStartPoll = handlers.handleStartPoll;

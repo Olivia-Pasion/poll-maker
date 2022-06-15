@@ -5,6 +5,7 @@
 export default function createPollTracker(root, dispatch) {  
     const handleUpVote = dispatch.handleUpVote;
     const handleDownVote = dispatch.handleDownVote;
+    const handleClosePoll = dispatch.handleClosePoll;
 
     // reference DOM
     const [optionADisplay, optionBDisplay] = root.querySelectorAll('span');
@@ -27,9 +28,9 @@ export default function createPollTracker(root, dispatch) {
         handleDownVote('B');
     });
 
-    // closePoll.addEventListner('click', () = {
-    //     handle
-    // })
+    closePoll.addEventListener('click', () => {
+        handleClosePoll();
+    });
     
 
     // should return its component render function
@@ -38,14 +39,13 @@ export default function createPollTracker(root, dispatch) {
         const poll = props.poll;
         if (!poll) {
             root.classList.add('hidden');
-            
-        } else {
-
-            root.classList.remove('hidden');
+            return;
         }
 
-        optionADisplay.textContent = poll.optionA.name;
-        optionBDisplay.textContent = poll.optionB.name;
-        
+        root.classList.remove('hidden');
     };
+
+    optionADisplay.textContent = poll.optionA.name;
+    optionBDisplay.textContent = poll.optionB.name;
+        
 }
