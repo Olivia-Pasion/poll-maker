@@ -43,9 +43,11 @@ export default function createPollTracker(root, dispatch) {
         }
 
         root.classList.remove('hidden');
+
+        optionADisplay.textContent = poll.optionA.name;
+        optionBDisplay.textContent = poll.optionB.name;
     };
 
-    optionADisplay.textContent = poll.optionA.name;
-    optionBDisplay.textContent = poll.optionB.name;
+    
         
 }
