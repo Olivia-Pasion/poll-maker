@@ -9,8 +9,9 @@ export default function createPollResults(root) {
     // should return its component render function
     // return ({ data }) => {
     return (props) => {
-        const poll = props.poll;
         
+        const poll = props.poll;
+        console.log(props);
         if (!poll) {
             root.classList.add('hidden');
             
@@ -25,8 +26,8 @@ export default function createPollResults(root) {
         div.classList.add('result-box');
 
         const span1 = document.createElement('span');
-        span1.classList.value = 'pollprompt';
-        span1.textContent = poll.pollPrompt;
+        span1.classList.value = 'prompt';
+        span1.textContent = poll.prompt;
         
         const span2 = document.createElement('span');
         span2.classList.value = 'option a';
