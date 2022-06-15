@@ -18,7 +18,104 @@
         <h1>Web MVC UI</h1>
     </header>
 
-    <main></main>
+    <main>
+
+        <section id="current-poll">
+
+            <h2>Current Poll</h2>
+
+            <section id="new-poll">
+
+                <form>
+                    <h3>New Poll</h3>
+                    <label>
+                        Poll Prompt
+                        <input required name="prompt">
+                    </label>
+                    <label>
+                        Option A
+                        <input required name="optionA">
+                    </label>
+                    <label>
+                        Option B
+                        <input required name="optionB">
+                    </label>
+                    <label>
+
+                        <button class="action">Open Poll</button>
+
+                    </label>
+                </form>
+
+            </section>
+
+            <section id="poll-results">
+
+            </section>
+
+            <section id="poll-tracker">
+
+                <div class="tally-counter">
+
+                    <span class="option a">option a</span>
+                    <button class="upvote a">+</button>
+                    <button class="downvote a">-</button>
+
+                    <span class="option b">option b</span>
+                    <button class="upvote b">+</button>
+                    <button class="downvote b">-</button>
+
+                    <button class="close-poll action">Close Poll</button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <section id="past-polls">
+            <h2>Past Polls</h2>
+
+            <div class="polls-container">
+
+                <div class="result-box">
+
+                    <span class="prompt"></span>
+                    <span class="option a"></span>
+                    <span class="tally a"></span>
+                    <span class="option b"></span>
+                    <span class="tally b"></span>
+
+                </div>
+
+                <div class="result-box">
+                    
+                    <span class="prompt"></span>
+                    <span class="option a"></span>
+                    <span class="tally a"></span>
+                    <span class="option b"></span>
+                    <span class="tally b"></span>
+
+                </div> 
+                
+                <div class="result-box">
+                    
+                    <span class="prompt"></span>
+                    <span class="option a"></span>
+                    <span class="tally a"></span>
+                    <span class="option b"></span>
+                    <span class="tally b"></span>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+       
+
+
+    </main>
 
     <footer>&copy;2021 Aspiring Software Developer</footer>
 
